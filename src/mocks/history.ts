@@ -1,0 +1,37 @@
+import { InventoryHistoryRecord } from "@/types";
+
+export const mockHistory: InventoryHistoryRecord[] = [
+  {
+    id: 1,
+    itemId: 1,
+    itemName: "свет правый в сборе",
+    sku: "SKU-1001",
+    sku1c: "1C-000001",
+    locationId: 1,
+    locationName: "Арма",
+    change: 25,
+    quantityBefore: 0,
+    quantityAfter: 25,
+    reason: "ADD",
+    userId: 1,
+    userName: "БОГ",
+    createdAt: new Date("2024-02-01T10:00:00").toISOString(),
+  },
+  {
+    id: 2,
+    itemId: 2,
+    itemName: "Лидар",
+    sku: "SKU-1002",
+    sku1c: "1C-000002",
+    locationId: 1,
+    locationName: "Арма",
+    change: -2,
+    quantityBefore: 10,
+    quantityAfter: 8,
+    reason: "DONOR_USE",
+    comment: "Установка на R-001",
+    userId: 3,
+    userName: "Сидоров Сидор",
+    createdAt: new Date("2024-02-05T14:30:00").toISOString(),
+  },
+];

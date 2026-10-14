@@ -1,0 +1,41 @@
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.label {
+  font-weight: 600;
+  user-select: none;
+}
+
+.sortable {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.sortable:hover {
+  color: var(--color-primary);
+}
+
+.arrow {
+  color: var(--color-text-muted);
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.filterRow {
+  display: block;
+}
+
+/* Когда сортировка активна — приглушаем стрелку при hover */
+.sortable:hover .arrow {
+  color: var(--color-primary);
+}
