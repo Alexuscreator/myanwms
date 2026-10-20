@@ -14,12 +14,11 @@ interface NavItem {
   href: string;
   label: string;
   icon: string;
-  // Если указана роль-ограничение, покажем пункт только тем, у кого есть право
   requiredRole?: Role[];
 }
 
 const NAV: NavItem[] = [
-  { href: "/inventory", label: "Части", icon: "📦" },
+  { href: "/inventory", label: "Запчасти", icon: "📦" },
   { href: "/robots", label: "Роботы-доноры", icon: "🤖" },
   // Пункт "Пользователи" — только для Бога
   {
@@ -42,13 +41,12 @@ export function AppLayout({
   const pathname = usePathname();
   const user = useAppSelector((s) => s.auth.currentUser);
 
-  // Защита роутов на клиенте: нет юзера → на /login
+
   useEffect(() => {
     if (!user) router.replace("/login");
   }, [user, router]);
 
   if (!user) {
-    // Пока редиректит — показываем пустой экран
     return <div style={{ padding: 24 }}>Загрузка…</div>;
   }
 

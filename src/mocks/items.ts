@@ -56,4 +56,15 @@ export const mockItems: Item[] = [
     storagePlace: "C-03-02",
     needForDonors: 4,
   },
+  {
+    id: 6,
+    locationId: 3,
+    name: "Аккумулятор ",
+    sku: "SKU-1488",
+    sku1c: "1C-000510",
+    quantity: 11,
+    photoUrl: "",
+    storagePlace: "C-11-06",
+    needForDonors: 4,
+  },
 ];

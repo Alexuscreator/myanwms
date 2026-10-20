@@ -30,19 +30,11 @@ export function AddMissingPartModal({
 
   if (!robot) return null;
 
-  /**
-   * Уникальные товары по SKU (в inventory один и тот же SKU
-   * может быть на нескольких локациях — нам нужен один пример).
-   */
+  
   const uniqueItems = Array.from(
     new Map(inventory.map((i) => [i.sku, i])).values(),
   );
 
-  /**
-   * Пользователь выбирает наименование — подтягиваем SKU, SKU1C и name.
-   * Значение option — это index в uniqueItems, чтобы отличать
-   * товары с одинаковым наименованием (если такие есть).
-   */
   const onSelectByName = (value: string) => {
     if (!value) return;
     const idx = Number(value);
