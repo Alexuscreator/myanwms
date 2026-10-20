@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: 'export', // Добавляем для статического экспорта
+  // cacheComponents и partialPrefetching нужно убрать
 };
 
 export default nextConfig;
