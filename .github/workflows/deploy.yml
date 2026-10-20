@@ -30,7 +30,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./out # Next.js с output: 'export' кладет файлы в папку out
+          path: ./out
 
       - name: Deploy to GitHub Pages
         id: deployment
